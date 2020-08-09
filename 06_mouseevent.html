@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse events in Vuejs</title>
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+  
+    <style>
+  
+      .divclass {
+          width: 100px;
+          height: 100px;
+          border: 2px solid black;
+      }
+
+    </style>
+
+
+</head>
+<body>
+    <div id="root">
+
+
+     <!--Move move event-->
+     <div v-on:mousemove="movefunction"  class="divclass"></div>
+
+
+     <span> X axis postion: {{x}}</span>
+     <span> Y axis postion {{y}}</span>
+ 
+    <br>
+    <br>
+    <!--Mouseover and mouseout event-->
+    <!--here we attahced two event to single button-->
+    <button type="button" @mouseover="overfunction" @mouseout="outfunction" >Mouse event testing Button</button>
+    <br>
+    <br>
+
+    <!-- <button  type="button" @mouseout="outfunction" >MouseOut Button</button> -->
+
+    </div>
+
+
+    <script src="/06_mouseevent.js"></script>
+</body>
+</html>

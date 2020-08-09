@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+    <title>Databinding concept in vuejs</title>
+  
+    <style>
+
+     .fiximage{
+         width: 100px;
+         height: 100px;
+     }
+    </style>
+
+
+
+</head>
+<body>
+     <!-- html attribiute binding -->
+    <div id="root">
+  <a :href="youtube" v-bind:title="channeltitle">{{name}}</a> <br>
+  <img v-bind:src="Imagelink" alt="this is normal image" style="width: 200ox; height: 200px;"> 
+
+
+  <!-- html Class binding -->
+   <!--Normal class assignment to class here-->
+  <img v-bind:src="Imagelink" alt="this is normal image" class="fiximage"> 
+
+
+  <!--class assignment based on condition here-->
+  <img v-bind:src="Imagelink" alt="this is normal image" v-bind:class="{fiximage:isActive}">  
+  
+  <br><br>
+  <!-- html form input binding -->
+ <form method="post">
+  
+    <input type="text" v-bind:value="txtname" placeholder="name"> 
+    <input type="text" v-bind:value="txtemail" placeholder="email">
+  <button type="submit">Submit the form</button>
+ </form>
+
+ <!--HTML parsing example-->
+  <div v-html="htmlcontent">
+  </div>
+
+
+
+  
+
+</div>
+
+
+
+
+<script src="/03_databind.js"></script>
+</body>
+</html>

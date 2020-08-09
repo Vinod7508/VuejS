@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling in VueJs </title>
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+</head>
+<body>
+
+   <div id="root">
+
+    <h2> counter : {{counter}}</h2>
+    
+      <!-- single click event in Vuejs -->
+     <br> <br>
+     <button @click="Increment(1)" type="button"> increase counter by 1</button>
+     <button @click="Deacrement(1)" type="button"> Descrease counter by 1</button>
+
+   
+      <br>
+      <br>
+     <!-- double click event in Vuejs -->
+      <button @dblclick="Increment(5)" type="button"> increase counter by 5</button>
+      <button v-on:dblclick="Deacrement(5)" type="button"> Descrease counter by 5</button>
+
+
+   </div>
+    
+
+
+
+<script src="/05_clickevent_handling.js"></script>
+
+</body>
+</html>
