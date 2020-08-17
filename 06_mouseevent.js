@@ -14,7 +14,7 @@ var instance = new Vue ({
             console.log("this is message due to mouseover")
         },
         outfunction : function(){
-            console.log("this is message due to mouse out event")
+            console.log("this is message coming due to mouse out event")
         }
     }
 })

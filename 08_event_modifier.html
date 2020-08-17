@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+    <title>Event modifier in VueJS once, prevent, stop, capture</title>
+     <!-- event modifier changes the default behaviour of events -->
+</head>
+<body>
+    
+<div id="root">
+
+
+    <!--Once event modifier-->
+
+   <h3> count is : {{count}}</h3>
+   <button type="button" @click.once="Incrementby1" name=""> increment by 1</button>
+
+
+   <br><br>
+   <!--prvent event modifier-->
+   <a href="http://www.google.com" v-on:click.prevent>google link</a>
+
+   <br><br>
+
+   
+
+   <form class="" action="#" method="post" @submit.prevent>
+    <button type="submit" name="button">Submit</button>
+  </form>
+
+  <br/><br/>
+
+
+
+   <!--stop event modifier-->
+ 
+<div id="parent-div" @click="submitClick">
+    <button id="child-div" @click.stop="submitClick">Click Me</button>
+ </div>
+ 
+ <br><br>
+ <!--Capture event modifier  this event captures the parent class event-->
+
+ <div class="parent-class" @click.capture="parentClass">
+    <button type="button" name="button" @click="btnClick">Click Me Again</button>
+</div>
+  
+
+</div>
+    
+
+    <script src="/08_event_modifier.js"></script>
+
+</body>
+</html>

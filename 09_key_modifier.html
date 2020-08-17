@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Key Modifiers in VueJS</title>
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+</head>
+<body>
+    
+  <div id="my-app">
+
+  <!--after pressing enter key(same for spacebar button)...the message is logged-->
+   <input type="text" @keypress.enter="keypressfunction">
+
+
+
+   <br><br>
+    <!--after pressing alt + enter key(same for cntr+enter)...the message is logged-->
+   <label> alt plus Enter Modification</label><br>
+   <input type="text" @keyup.alt.enter="keyupfunction">
+
+  <br>
+  <br>  
+   <label> Backspace button</label><br>
+   <input type="text" @keyup.delete="BackupspaceWorking">
+
+
+   <br>
+   <br>
+   <label>keycode event</label>
+   <!--65 is hex value for a-->
+   <input type="text" @keyup.65="KeycodeMessage">
+  </div>
+
+
+
+
+    <script src="/09_keymodifier.js"></script>
+</body>
+</html>

@@ -5,11 +5,11 @@ var instance = new Vue ({
    },
    methods:{
     Increment: function(inc){
-      this.counter = this.counter+ inc;
+    this.counter += inc;
       return counter;
     },
     Deacrement: function(dec){
-      this.counter = this.counter - dec;
+      this.counter -= dec;
       return counter;
     }
    }

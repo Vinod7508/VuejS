@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Key Modifiers in VueJS</title>
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+</head>
+<body>
+    
+  <div id="root">
+
+
+    <!--here v-model is updating live data in the dom model-->
+    <input type="text" v-model="character">
+    <br><br>
+    the character you have entered: {{character}}
+    
+   <br>
+   <br>
+    <form action="">
+ 
+        <label for="name"> Name : </label>
+        <input type="text" v-model="name" id="name" placeholder="enter the name"> 
+
+         <br>
+         <br>
+        <label for="email">Email: </label>
+        <input type="text" v-model="email" id="email" placeholder="enter the email">
+    </form>
+
+    <h5>the name && and email of person is  {{name}}  {{email}}</h5>
+
+  </div>
+
+
+    <script src="/010_twoWay_DataBinding.js"></script>
+</body>
+</html>

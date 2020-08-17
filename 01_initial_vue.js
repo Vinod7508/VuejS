@@ -6,7 +6,7 @@ var test = new Vue({
     },
     methods:{
       run : function( msg){
-          return "i am learning vuejs "  + msg; 
+          return "i am learning vuejs hindi tutorial"  + msg; 
       },
       valueaccess : function(){
           return this.sachin

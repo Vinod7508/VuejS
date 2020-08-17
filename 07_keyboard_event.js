@@ -11,7 +11,7 @@ var instance = new Vue ({
         console.log("keyup event is fired")
     },
     keydownfun:function(e){
-        console.log(`you have down ${e.code} value`)
+        console.log(`you have down ${e.code} value using keyboard`)
     }
 
   }
