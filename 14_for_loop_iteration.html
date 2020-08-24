@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for loop iteration using Vuejs</title>
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+
+</head>
+
+<body>
+
+    <div id="root">
+        <ul>
+            <li v-for="(student,index) in students">
+                {{index}} : {{student}}
+            </li>
+        </ul>
+
+
+        <ul>
+            <li v-for="teacher in teachers">
+                {{teacher.name}} teaches {{teacher.subject}} and lives at {{teacher.location.street}},
+                {{teacher.location.city}}
+            </li>
+        </ul>
+
+
+        <!--Another use case of v-for-->
+        <ul>
+            <li v-for="teacher in teachers">
+                <!--here index is key and Addr is value for that corraponding key-->
+                <p v-for="(addr,index) in teacher.location">
+                    {{index}} : {{addr}}
+                </p>
+            </li>
+        </ul>
+
+        <template v-for="teacher in teachers">
+          <div v-for="(val,key) in teacher">
+             <p>{{key}} :  {{val}}</p>
+
+          </div>
+        </template>
+
+    </div>
+
+
+    <script src="/14_for_loop_iteration.js"></script>
+</body>
+
+</html>

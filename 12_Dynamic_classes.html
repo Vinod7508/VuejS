@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dynamic classes using Vuejs</title>
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+
+
+    <style>
+        .redClass {
+            background-color: red;
+            border: 2px solid black;
+            color: black;
+        }
+
+
+        button {
+            background-color:blue;
+            border: 2px solid white;
+            color: white
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+    <div id="root">
+
+
+        <button type="button" v-bind:class="{redClass:isActive}" @click="ToggleClass"> toggle class</button>
+
+        <!--below is another way
+        <button type="button" v-bind:class="{redClass:isActive}" @click="isActive = !isActive"> toggle class</button>
+       -->
+    </div>
+
+
+    <script src="/12_Dynamic_classes.js"></script>
+</body>
+
+</html>
